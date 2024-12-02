@@ -3,9 +3,9 @@ import VirtualMuseum from '../../image/virtual-museum.jpg';
 
 export const CurrentProjects = () => {
     return (
-        <div className="min-h-screen w-full flex flex-col gap-10">
-            <div className="flex items-center justify-center w-full my-10">
-                <h2 className="text-7xl px-10 py-5">Текущие проекты</h2>
+        <div className="min-h-screen w-full flex flex-col gap-12 items-center">
+            <div className="flex items-center justify-center w-full my-6">
+                <h2 className="text-6xl px-10">Текущие проекты</h2>
             </div>
             <div className="flex w-full justify-around gap-8" style={{color: '#1652D1'}}>
                 <div className='w-[45%]'>
@@ -28,6 +28,7 @@ export const CurrentProjects = () => {
                     </div>
                 </div>
             </div>
+            <button className='w-[40%] border-2 px-4 py-5 text-2xl rounded-md text-fuchsia-50' style={{backgroundColor: '#907DFFB2', borderColor: '#907DFF'}}>Создать свою метавселенную</button>
         </div>
     );
 }
