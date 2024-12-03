@@ -8,7 +8,7 @@ export default function Header() {
     return (
       <div className="flex h-56 w-[100%]">
         <div className="relative h-56 w-56 top-11 left-11">
-          <img className="h-52 w-52 object-cover" src={logo} alt="" />
+          <img className="h-52 w-52 object-covern" src={logo} alt="" />
         </div>
         <div className="relative h-40 w-56 m-10 flex justify-center cursor-pointer">
           <div className='text-4xl m-auto'>О Нас</div>
