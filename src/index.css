@@ -7,8 +7,11 @@
 body,
 html {
     height: 100%;
-    background: linear-gradient(rgb(106, 106, 255), rgb(255, 192, 232));
-    overflow: hidden;
+    background: linear-gradient(rgb(106, 106, 255), rgb(255, 192, 232)) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'Vezla', sans-serif;           
 }
 
@@ -16,4 +19,8 @@ html {
     height: 100%;
     width: 100%;                                                                    
     font-family: 'Vezla', sans-serif;                                       
+}
+
+::-webkit-scrollbar {
+    width: 0;
 }
