@@ -8,9 +8,9 @@ import { WhyWe } from './template/WhyWe/WhyWe';
 export default function App() {
   return (
     <>
-      {/* <Header /> */}
-      {/* <AboutUs /> */}
-      {/* <CurrentProjects /> */}
+      <Header />
+      <AboutUs />
+      <CurrentProjects />
       <WhyWe />
     </>
   )
