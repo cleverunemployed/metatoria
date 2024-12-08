@@ -1,17 +1,25 @@
 import { useRef, useState } from "react";
 import VRGlassesOnTable from "../../image/vr-glasses-on-table.png";
 
-export const FormPanel = () => {
-    const phoneNumberMask = "+7(___)___-__-__";
+export const phoneNumberMask = "+7(___)___-__-__";
 
+export const FormPanel = () => {
     const [phoneNumberInput, setPhoneNumberInput] = useState(() => "");
+    const [clientName, setClientName] = useState(() => "");
+    const [comment, setComment] = useState(() => "");
 
     const phoneInputRef = useRef(null);
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+        console.log(event);
+    };
 
     const handlePhoneNumberInput = (event) => {
         const { value, selectionStart, selectionEnd } = event.target;
         /* TODO: normal validate inputs */
         const input = value.replace(/^\+7|[^\d]/g, "");
+
         let formattedValue = phoneNumberMask;
         console.log(value, input);
 
@@ -42,6 +50,7 @@ export const FormPanel = () => {
             <div className="flex justify-around">
                 <div className="flex-1 flex justify-center">
                     <form
+                        onSubmit={onSubmit}
                         style={{ backgroundColor: "#F2EFEF4D" }}
                         className="w-[80%] h-5/6 p-10 flex flex-col gap-12 items-center justify-center rounded-[45px] shadow-[4px_4px_4px_-1px_rgba(0,0,0,0.3)]"
                     >
@@ -50,6 +59,11 @@ export const FormPanel = () => {
                             style={{ backgroundColor: "#ACC5F8" }}
                             type="text"
                             placeholder="Иванов Иван"
+                            name="client"
+                            value={clientName}
+                            onChange={({ target }) =>
+                                setClientName(target.value)
+                            }
                             required
                         />
                         <input
@@ -59,7 +73,7 @@ export const FormPanel = () => {
                             name="phoneNumber"
                             style={{ backgroundColor: "#ACC5F8" }}
                             placeholder={phoneNumberMask}
-                            // pattern="^\+7$\d{3}$\d{3}-\d{2}-\d{2}$"
+                            pattern="^\+7\([\d]{3}\)[\d]{3}-[\d]{2}-[\d]{2}"
                             value={
                                 phoneNumberInput === ""
                                     ? phoneNumberMask
@@ -71,7 +85,10 @@ export const FormPanel = () => {
                         <textarea
                             className="resize-none h-2/6 w-full text-center text-3xl rounded-3xl border-4 border-black placeholder:p-6 placeholder:text-center placeholder:text-4xl placeholder:text-black focus:placeholder:text-transparent"
                             style={{ backgroundColor: "#ACC5F8" }}
+                            onChange={({ target }) => setComment(target.value)}
+                            value={comment}
                             type="text"
+                            name="comment"
                             placeholder="Комментарий"
                         />
                         <button
