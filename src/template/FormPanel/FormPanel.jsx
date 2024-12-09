@@ -52,48 +52,52 @@ export const FormPanel = () => {
                     <form
                         onSubmit={onSubmit}
                         style={{ backgroundColor: "#F2EFEF4D" }}
-                        className="w-[80%] h-5/6 p-10 flex flex-col gap-12 items-center justify-center rounded-[45px] shadow-[4px_4px_4px_-1px_rgba(0,0,0,0.3)]"
+                        className="w-[80%] h-5/6 p-10 grid grid-cols-1 grid-rows-[1fr_1fr_1fr_1fr] gap-4 px-4 items-center justify-center rounded-[45px] shadow-[4px_4px_4px_-1px_rgba(0,0,0,0.3)]"
                     >
-                        <input
-                            className="w-full h-2/6 text-center text-5xl rounded-3xl border-4 border-black placeholder:text-center placeholder:text-5xl placeholder:text-black focus:placeholder:text-transparent"
-                            style={{ backgroundColor: "#ACC5F8" }}
-                            type="text"
-                            placeholder="Иванов Иван"
-                            name="client"
-                            value={clientName}
-                            onChange={({ target }) =>
-                                setClientName(target.value)
-                            }
-                            required
-                        />
-                        <input
-                            ref={phoneInputRef}
-                            className="h-2/6 w-full text-center text-3xl rounded-3xl border-4 border-black placeholder:text-center placeholder:text-4xl placeholder:text-black focus:placeholder:text-transparent"
-                            type="tel"
-                            name="phoneNumber"
-                            style={{ backgroundColor: "#ACC5F8" }}
-                            placeholder={phoneNumberMask}
-                            pattern="^\+7\([\d]{3}\)[\d]{3}-[\d]{2}-[\d]{2}"
-                            value={
-                                phoneNumberInput === ""
-                                    ? phoneNumberMask
-                                    : phoneNumberInput
-                            }
-                            onChange={handlePhoneNumberInput}
-                            required
-                        />
-                        <textarea
-                            className="resize-none h-2/6 w-full text-center text-3xl rounded-3xl border-4 border-black placeholder:p-6 placeholder:text-center placeholder:text-4xl placeholder:text-black focus:placeholder:text-transparent"
-                            style={{ backgroundColor: "#ACC5F8" }}
-                            onChange={({ target }) => setComment(target.value)}
-                            value={comment}
-                            type="text"
-                            name="comment"
-                            placeholder="Комментарий"
-                        />
+                        <label className="h-28 w-full border-4 rounded-3xl border-black bg-[#ACC5F8] hover:bg-[#9cb7ee] flex items-center justify-center">
+                            <input
+                                className="w-full h-[90%] m-5 text-center text-5xl border-black bg-[#ACC5F8] hover:bg-[#9cb7ee] border-none outline-none focus:ring-0 placeholder:text-center placeholder:text-5xl placeholder:text-black focus:placeholder:text-transparent"
+                                type="text"
+                                placeholder="Иванов Иван"
+                                name="client"
+                                value={clientName}
+                                onChange={({ target }) =>
+                                    setClientName(target.value)
+                                }
+                                required
+                            />
+                        </label>
+                        <label className="h-28 w-full rounded-3xl border-4 border-black bg-[#ACC5F8] hover:bg-[#9cb7ee] flex items-center justify-center">
+                            <input
+                                ref={phoneInputRef}
+                                type="tel"
+                                name="phoneNumber"
+                                className="text-center text-3xl tracking-[.2em] m-5 w-full h-[90%] bg-[#ACC5F8] hover:bg-[#9cb7ee] placeholder:text-center placeholder:text-4xl placeholder:text-black placeholder:tracking-widest focus:placeholder:text-transparent border-none outline-none focus:ring-0"
+                                placeholder={phoneNumberMask}
+                                pattern="^\+7\([\d]{3}\)[\d]{3}-[\d]{2}-[\d]{2}"
+                                value={
+                                    phoneNumberInput === ""
+                                        ? phoneNumberMask
+                                        : phoneNumberInput
+                                }
+                                onChange={handlePhoneNumberInput}
+                                required
+                            />
+                        </label>
+                        <label className="h-28 w-full border-4 rounded-3xl border-black bg-[#ACC5F8] hover:bg-[#9cb7ee] flex items-center justify-center">
+                            <textarea
+                                className="resize-none text-3xl m-5 w-full h-[90%] box-border bg-[#ACC5F8] hover:bg-[#9cb7ee] focus:outline-none placeholder:p-6 placeholder:text-center placeholder:text-4xl placeholder:text-black focus:placeholder:text-transparent"
+                                onChange={({ target }) =>
+                                    setComment(target.value)
+                                }
+                                value={comment}
+                                type="text"
+                                name="comment"
+                                placeholder="Комментарий"
+                            />
+                        </label>
                         <button
-                            className="h-2/6 w-full text-center text-3xl rounded-3xl border-4 border-black"
-                            style={{ backgroundColor: "#907DFFB2" }}
+                            className="h-28 w-full text-center text-3xl rounded-3xl border-4 border-black bg-[#907DFFB2] hover:bg-[#7b67ecb2]"
                             type="submit"
                         >
                             Отправить
