@@ -126,7 +126,7 @@ export const FormPanel = () => {
                         </button>
                     </form>
                 </div>
-                <div className="flex-1 flex items-center justify-center">
+                <div className="flex-1 flex items-center justify-center max-h-[90%]">
                     <img
                         className="rounded-xl max-w-[80%] max-h-[70%] rotate-[6deg] mx-auto"
                         src={VRGlassesOnTable}
