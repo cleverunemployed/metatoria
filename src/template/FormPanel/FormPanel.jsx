@@ -17,11 +17,16 @@ export const FormPanel = () => {
         const { client, phoneNumber, comment } = event.target;
 
         if (
-            !(client && typeof client === "string" && client.trim()) ||
+            !(
+                client &&
+                client.value &&
+                typeof client.value === "string" &&
+                client.value.trim()
+            ) ||
             !phoneNumber
         ) {
             setModalOpen(true);
-            console.log(modalOpen, client, phoneNumber);
+
             return;
         }
         if (modalOpen) {
