@@ -13,7 +13,7 @@ export const OurTeam = () => {
             <div className="flex justify-center items-center">
                 <h2>Наша команда</h2>
             </div>
-            <div className="grid grid-cols-4 grid-rows-2">
+            <div className="grid grid-cols-4 grid-rows-2 gap-10">
                 <ProfileCard
                     imgSource={DEdremov}
                     person={"Ефремов Денис"}
