@@ -7,7 +7,7 @@ export const Metaverse = () => {
         <div className="w-full h-screen flex flex-col gap-12">
             <div>
                 <h2 className="text-6xl px-10 py-5 text-center">
-                    Зачем нужны метавселенные? хз честно
+                    Зачем нужны метавселенные?
                 </h2>
             </div>
             <div className="flex justify-around">
