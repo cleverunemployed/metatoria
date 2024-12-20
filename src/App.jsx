@@ -12,13 +12,13 @@ export default function App() {
     return (
         <>
             <Header />
-            {/* <AboutUs />
+            <LinkPanel />
+            <AboutUs />
             <CurrentProjects />
             <WhyWe />
-            <FormPanel /> */}
-            {/* <OurTeam /> */}
-            {/* <Metaverse /> */}
-            <LinkPanel />
+            <FormPanel />
+            <OurTeam /> 
+            <Metaverse />
         </>
     );
 }

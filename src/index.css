@@ -13,16 +13,17 @@
     font-weight: 800;
     font-style: normal;
 }
+
 body,
 html {
     height: 100%;
-    background: linear-gradient(rgb(106, 106, 255), rgb(255, 192, 232))
-        no-repeat center center fixed;
+    background: url("../src/image/background.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-family: "Vezla", sans-serif;
+    scrollbar-width: 0;
 }
 
 #root {
