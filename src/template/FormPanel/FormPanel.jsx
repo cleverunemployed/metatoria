@@ -2,7 +2,8 @@ import { useRef, useState } from "react";
 import VRGlassesOnTable from "../../image/vr-glasses-on-table.png";
 import { Modal } from "../../components/Modal/Modal";
 import axios from "axios";
-import bot from "../../bot"
+
+const bot = import.meta.env.VITE_BOT_TOKEN;
 
 export const phoneNumberMask = "+7(___)___-__-__";
 
