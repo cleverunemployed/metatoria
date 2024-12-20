@@ -10,7 +10,6 @@ import { OurTeam } from "./template/OurTeam/OurTeam"
 import { Metaverse } from "./template/Metaverse/Metaverse"
 
 export default function App() {
-<<<<<<< HEAD
     return (
         <>
             <Header />
@@ -25,15 +24,3 @@ export default function App() {
         </>
     )
 }
-=======
-  return (
-    <>
-      <Header />
-      <AboutUs />
-      <CurrentProjects />
-      <WhyWe />
-      <BottomPanel></BottomPanel>
-    </>
-  )
-}
->>>>>>> e1d8a867dbfd17cb9a06715df9896696806f0ad3
