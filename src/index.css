@@ -9,9 +9,9 @@
 }
 @font-face {
     font-family: "Montserrat";
-    src: url("./font/Montserrat-ExtraBold.ttf");
     font-weight: 800;
     font-style: normal;
+    src: url("./font/Montserrat-ExtraBold.ttf") format("ttf"),
 }
 
 body,
