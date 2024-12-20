@@ -4,6 +4,7 @@ import VirtualMuseum from "../../image/virtual-museum.jpg";
 export const CurrentProjects = () => {
     return (
         <div className="min-h-screen w-full flex flex-col gap-12 items-center">
+            <a name="currentprojects"></a>
             <div className="flex items-center justify-center w-full my-6">
                 <h2 className="text-6xl px-10">Текущие проекты</h2>
             </div>

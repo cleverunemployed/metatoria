@@ -4,6 +4,7 @@ import GyuInVrGlasses from '../../image/guy-in-vr-glasses.png';
 export const AboutUs = () => {
     return (
         <div className="min-h-screen w-full">
+            <a name="aboutme"></a>
             <div className="flex items-center justify-center w-full my-20">
                 <h2 className="text-7xl px-10 py-5">Коротко о нас</h2>
             </div>

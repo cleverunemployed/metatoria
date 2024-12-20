@@ -10,6 +10,7 @@ import DolgovKirill from "../../image/dolgov-kirill.png";
 export const OurTeam = () => {
     return (
         <div className="w-full h-screen">
+            <a name="ourteam"></a>
             <div className="flex justify-center">
                 <h2 className="text-center text-6xl py-5">Наша команда</h2>
             </div>
