@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-
+    content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
+    fontFamily: {
+        vezla: ["Vezla", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        spaceage: ["Space Age Cyrillic", "sans-serif"],
+    },
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+};

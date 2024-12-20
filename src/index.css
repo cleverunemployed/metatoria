@@ -1,19 +1,37 @@
-
-@import url('https://fonts.cdnfonts.com/css/vezla');
+@import url("https://fonts.cdnfonts.com/css/vezla");
 @font-face {
     font-family: "Vezla";
     src: url("./font/Vezla_2.0.ttf");
 }
+@font-face {
+    font-family: "Space Age Cyrillic";
+    src: url("./font/Space_Age.ttf");
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("./font/Montserrat-ExtraBold.ttf");
+    font-weight: 800;
+    font-style: normal;
+}
+
 body,
 html {
     height: 100%;
-    background: linear-gradient(rgb(106, 106, 255), rgb(255, 192, 232));
-    overflow: hidden;
-    font-family: 'Vezla', sans-serif;           
+    background: url("../src/image/background.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Vezla", sans-serif;
+    scrollbar-width: 0;
 }
 
 #root {
     height: 100%;
-    width: 100%;                                                                    
-    font-family: 'Vezla', sans-serif;                                       
+    width: 100%;
+    font-family: "Vezla", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
 }
