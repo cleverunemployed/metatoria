@@ -27,3 +27,4 @@ bot.js
 #my fixes
 .prettierrc
 *.lockb
+.env
