@@ -23,7 +23,8 @@ html {
     -o-background-size: cover;
     background-size: cover;
     font-family: "Vezla", sans-serif;
-    scrollbar-width: 0;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
 }
 
 #root {

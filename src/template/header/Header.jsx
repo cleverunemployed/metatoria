@@ -4,7 +4,7 @@ import vk from '../../image/vk_logo.png'
 
 
 
-export default function Header() {
+export default function Header({}) {
     return (
       <div className="flex h-56 w-[100%]">
         <div className="relative h-56 w-56 top-11 left-11">

@@ -7,7 +7,11 @@ export default {
         spaceage: ["Space Age Cyrillic", "sans-serif"],
     },
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'footer': '#6487D3',
+            },
+        },
     },
     plugins: [],
 };
