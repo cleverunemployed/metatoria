@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import VRGlassesOnTable from "../../image/vr-glasses-on-table.png";
 import { Modal } from "../../components/Modal/Modal";
+import axios from "axios";
+import bot from "../../bot"
 
 export const phoneNumberMask = "+7(___)___-__-__";
 
@@ -11,6 +13,23 @@ export const FormPanel = () => {
     const [comment, setComment] = useState(() => "");
 
     const phoneInputRef = useRef(null);
+
+    const sendMessageToTelegram = (message) => {
+        const botToken = bot;
+        const chatId = "ID кому присылать черз бота";
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    
+        axios.post(url, {
+            chat_id: chatId,
+            text: message,
+        })
+        .then((response) => {
+            console.log("Message sent to Telegram:", response.data);
+        })
+        .catch((error) => {
+            console.error("Failed to send message:", error);
+        });
+    };
 
     const onSubmit = (event) => {
         event.preventDefault();
@@ -32,7 +51,15 @@ export const FormPanel = () => {
         if (modalOpen) {
             setModalOpen(false);
         }
-        /* Send data */
+
+        sendMessageToTelegram(`
+            ФИО: ${client.value.trim()}
+Телефон: ${phoneNumber.value}
+Комментарий: ${comment.value}
+        `)
+        setComment("")
+        setClientName("")
+        setPhoneNumberInput("")
     };
 
     const handlePhoneNumberInput = (event) => {
