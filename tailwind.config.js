@@ -4,6 +4,7 @@ export default {
     fontFamily: {
         vezla: ["Vezla", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        spaceage: ["Space Age Cyrillic", "sans-serif"],
     },
     theme: {
         extend: {},

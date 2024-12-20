@@ -4,6 +4,10 @@
     src: url("./font/Vezla_2.0.ttf");
 }
 @font-face {
+    font-family: "Space Age Cyrillic";
+    src: url("./font/Space_Age.ttf");
+}
+@font-face {
     font-family: "Montserrat";
     src: url("./font/Montserrat-ExtraBold.ttf");
     font-weight: 800;
